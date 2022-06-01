@@ -7,7 +7,7 @@ import { buildImageObj } from "../lib/helpers";
 
 function SEO({ description, lang, meta, keywords, title, image }) {
   const { site } = useStaticQuery(detailsQuery) || {};
-
+  const robots = "noindex, nofollow";
   const metaDescription = description || site.description || "";
   const siteTitle = site.title || "";
   const siteAuthor = site.author?.name || "";
@@ -21,6 +21,10 @@ function SEO({ description, lang, meta, keywords, title, image }) {
       title={title}
       titleTemplate={title === siteTitle ? "%s" : `%s | ${siteTitle}`}
       meta={[
+        {
+          name: "robots",
+          content: robots,
+        },
         {
           name: "description",
           content: metaDescription,
