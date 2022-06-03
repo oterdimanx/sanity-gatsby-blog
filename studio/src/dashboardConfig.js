@@ -14,13 +14,13 @@ export default {
                 {
                   buildHookId:
                     "6256ec14b513e23c476549bd",
-                  title: "Sanity Studio",
+                  title: "Raiatea-Immobilier Sanity Back-Office",
                   name: "sanity-gatsby-blog-studio-8ddx34o3",
                   apiId: "ddda0c19-c64b-4535-b4e5-fbe12a41da1f",
                 },
                 {
                   buildHookId: "6256ec14274ed740f5d2d7ed",
-                  title: "Blog Website",
+                  title: "Raiatea-Immo Front Website",
                   name: "sanity-gatsby-blog-web-mzdn2nm3",
                   apiId: "2cc37e51-fdab-48ac-a3ea-270faade2dde",
                 },
@@ -47,7 +47,7 @@ export default {
     {
       name: "document-list",
       options: {
-        title: "Recent blog posts",
+        title: "Annonces récentes",
         order: "_createdAt desc",
         types: ["post"],
       },

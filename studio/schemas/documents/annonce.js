@@ -53,12 +53,25 @@ export default {
     {
       name: "categories",
       type: "array",
-      title: "Categories",
+      title: "Type",
       of: [
         {
           type: "reference",
           to: {
             type: "category",
+          },
+        },
+      ],
+    },
+    {
+      name: "isles",
+      type: "array",
+      title: "Île",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "isle",
           },
         },
       ],

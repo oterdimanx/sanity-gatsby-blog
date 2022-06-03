@@ -1,6 +1,6 @@
 import S from "@sanity/desk-tool/structure-builder";
 import { MdSettings } from "react-icons/md";
-import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
+import { MdPerson, MdDescription, MdLocalOffer, MdOutlineAnchor } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -18,7 +18,7 @@ export const getDefaultDocumentNode = (props) => {
    * https://www.sanity.io/docs/structure-builder-reference#getdefaultdocumentnode-97e44ce262c9
    */
   const { schemaType } = props;
-  if (schemaType == "post") {
+  if (schemaType == "annonce" || schemaType == "post") {
     return S.document().views([
       S.view.form(),
       S.view
@@ -64,16 +64,21 @@ export default () =>
         .schemaType("author")
         .child(S.documentTypeList("author").title("Rédacteurs")),
       S.listItem()
-        .title("Catégories")
+        .title("Types de biens")
         .icon(MdLocalOffer)
         .schemaType("category")
-        .child(S.documentTypeList("category").title("Catégories")),
+        .child(S.documentTypeList("category").title("Types existants")),
+      S.listItem()
+        .title("Iles")
+        .icon(MdOutlineAnchor)
+        .schemaType("isle")
+        .child(S.documentTypeList("isle").title("Îles")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
+          !["isle", "category", "author", "post", "annonce", "siteSettings"].includes(
             listItem.getId()
           )
       ),
