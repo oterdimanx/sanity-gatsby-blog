@@ -64,19 +64,6 @@ export default {
       ],
     },
     {
-      name: "isles",
-      type: "array",
-      title: "Île",
-      of: [
-        {
-          type: "reference",
-          to: {
-            type: "isle",
-          },
-        },
-      ],
-    },
-    {
       name: "body",
       type: "bodyPortableText",
       title: "Body",

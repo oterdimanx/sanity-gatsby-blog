@@ -8,7 +8,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import author from "./documents/author";
 import category from "./documents/category";
 import isle from "./documents/isle";
-import post from "./documents/annonce";
+import annonce from "./documents/annonce";
 import siteSettings from "./documents/siteSettings";
 
 // Object types
@@ -28,9 +28,8 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
-    post,
+    annonce,
     category,
-    isle,
     author,
     mainImage,
     authorReference,
