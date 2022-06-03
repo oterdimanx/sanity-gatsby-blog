@@ -12,7 +12,6 @@ function BlogPost(props) {
     _rawBody,
     authors,
     categories,
-    isles,
     title,
     mainImage,
     publishedAt,
@@ -53,16 +52,6 @@ function BlogPost(props) {
                 <ul>
                   {categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {isles && (
-              <div className={styles.isles}>
-                <h3 className={styles.islesHeadline}>Île</h3>
-                <ul>
-                  {isles.map((isle) => (
-                    <li key={isle._id}>{isle.title}</li>
                   ))}
                 </ul>
               </div>
