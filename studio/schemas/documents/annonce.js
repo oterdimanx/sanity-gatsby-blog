@@ -71,7 +71,7 @@ export default {
         {
           type: "reference",
           to: {
-            type: "isle",
+            type: "island",
           },
         },
       ],

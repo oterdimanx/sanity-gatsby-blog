@@ -1,5 +1,5 @@
 export default {
-  name: "isle",
+  name: "island",
   type: "document",
   title: "Île",
   fields: [

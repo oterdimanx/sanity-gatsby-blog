@@ -7,7 +7,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // document schemas
 import author from "./documents/author";
 import category from "./documents/category";
-import isle from "./documents/isle";
+import island from "./documents/island";
 import annonce from "./documents/annonce";
 import siteSettings from "./documents/siteSettings";
 
@@ -30,7 +30,7 @@ export default createSchema({
     siteSettings,
     annonce,
     category,
-    isle,
+    island,
     author,
     mainImage,
     authorReference,
