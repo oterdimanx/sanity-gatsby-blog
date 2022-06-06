@@ -16,10 +16,31 @@ export const query = graphql`
         _id
         title
       }
+      isles {
+        _id
+        title
+      }
+      chambres {
+        _id
+        numChambres
+        quantity
+      }
+      garageItems {
+        ident
+        name
+        quantity
+      }
+      terraItems {
+        id
+        name
+        quantity
+      }
       mainImage {
         ...SanityImage
         alt
       }
+      surface
+      price
       title
       slug {
         current

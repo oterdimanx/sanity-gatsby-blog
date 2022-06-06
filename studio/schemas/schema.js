@@ -9,7 +9,10 @@ import author from "./documents/author";
 import category from "./documents/category";
 import island from "./documents/island";
 import annonce from "./documents/annonce";
+import rooms from "./documents/rooms";
 import siteSettings from "./documents/siteSettings";
+import terraItem from "./documents/terraItem";
+import garageItem from "./documents/garageItem"
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
@@ -31,6 +34,9 @@ export default createSchema({
     annonce,
     category,
     island,
+    rooms,
+    terraItem,
+    garageItem,
     author,
     mainImage,
     authorReference,

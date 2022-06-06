@@ -59,10 +59,10 @@ export default () =>
         .schemaType("post")
         .child(S.documentTypeList("post").title("Annonces")),
       S.listItem()
-        .title("Rédacteurs")
+        .title("Prise en charge")
         .icon(MdPerson)
         .schemaType("author")
-        .child(S.documentTypeList("author").title("Rédacteurs")),
+        .child(S.documentTypeList("author").title("Personne associée au dossier")),
       S.listItem()
         .title("Types de biens")
         .icon(MdLocalOffer)
@@ -73,13 +73,29 @@ export default () =>
         .icon(MdOutlineAnchor)
         .schemaType("island")
         .child(S.documentTypeList("island").title("Îles")),
+      S.listItem()
+        .title("Chambres")
+        .icon(MdOutlineAnchor)
+        .schemaType("rooms")
+        .child(S.documentTypeList("rooms").title("Chambres")),
+      S.listItem()
+        .title("Garages")
+        .icon(MdOutlineAnchor)
+        .schemaType("garageItem")
+        .child(S.documentTypeList("garageItem").title("garageItem")),
+      S.listItem()
+        .title("Terrasses")
+        .icon(MdOutlineAnchor)
+        .schemaType("terraItem")
+        .child(S.documentTypeList("terraItem").title("terraItem")),
 
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
+
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["island", "category", "author", "post", "siteSettings"].includes(
+          !["terraItem", "garageItem", "rooms", "island", "category", "author", "post", "siteSettings"].includes(
             listItem.getId()
           )
       ),

@@ -77,6 +77,132 @@ export default {
       ],
     },
     {
+      name: "chambres",
+      type: "array",
+      title: "Nombre de Chambres",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "rooms",
+          },
+        },
+      ],
+      description:
+        "Le nombre de chambres doit être une valeur numérique",
+    },
+    {
+      name: "garageItems",
+      type: "array",
+      title: "Nombre de Garages",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "garageItem",
+          },
+        },
+      ],
+    },
+    {
+      name: "terraItems",
+      type: "array",
+      title: "Nombre de Terrasses",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "terraItem",
+          },
+        },
+      ],
+    },
+    {
+      name: "surface",
+      type: "string",
+      title: "Surface",
+    },
+    {
+      name: "price",
+      type: "number",
+      title: "Prix",
+    },
+    {
+      name: "altImage1",
+      type: "mainImage",
+      title: "Images de la galerie (1)",
+    },
+    {
+      name: "altImage2",
+      type: "mainImage",
+      title: "Images de la galerie (2)",
+    },
+    {
+      name: "altImage3",
+      type: "mainImage",
+      title: "Images de la galerie (3)",
+    },
+    {
+      name: "altImage4",
+      type: "mainImage",
+      title: "Images de la galerie (4)",
+    },
+    {
+      name: "altImage5",
+      type: "mainImage",
+      title: "Images de la galerie (5)",
+    },
+    {
+      name: "altImage6",
+      type: "mainImage",
+      title: "Images de la galerie (6)",
+    },
+    {
+      name: "altImage7",
+      type: "mainImage",
+      title: "Images de la galerie (7)",
+    },
+    {
+      name: "altImage8",
+      type: "mainImage",
+      title: "Images de la galerie (8)",
+    },
+    {
+      name: "altImage9",
+      type: "mainImage",
+      title: "Images de la galerie (9)",
+    },
+    {
+      name: "altImage10",
+      type: "mainImage",
+      title: "Images de la galerie (10)",
+    },
+    {
+      name: "altImage11",
+      type: "mainImage",
+      title: "Images de la galerie (11)",
+    },
+    {
+      name: "altImage12",
+      type: "mainImage",
+      title: "Images de la galerie (12)",
+    },
+    {
+      name: "altImage13",
+      type: "mainImage",
+      title: "Images de la galerie (13)",
+    },
+    {
+      name: "altImage14",
+      type: "mainImage",
+      title: "Images de la galerie (14)",
+    },
+    {
+      name: "altImage15",
+      type: "mainImage",
+      title: "Images de la galerie (15)",
+    },
+    {
       name: "body",
       type: "bodyPortableText",
       title: "Body",

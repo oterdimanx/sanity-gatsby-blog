@@ -108,3 +108,102 @@
   margin: 0.5rem 0 0;
 }
 
+.chambres {
+  border-top: 1px solid var(--color-very-light-gray);
+  margin: 2rem 0 3rem;
+
+@nest & ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+@nest & ul li {
+  padding: 0.25rem 0;
+}
+}
+
+.chambresHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
+}
+
+.garageItems {
+  border-top: 1px solid var(--color-very-light-gray);
+  margin: 2rem 0 3rem;
+
+@nest & ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+@nest & ul li {
+  padding: 0.25rem 0;
+}
+}
+
+.garageItemsHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
+}
+
+.terraItems {
+  border-top: 1px solid var(--color-very-light-gray);
+  margin: 2rem 0 3rem;
+
+@nest & ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+@nest & ul li {
+  padding: 0.25rem 0;
+}
+}
+
+.terraItemsHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
+}
+
+.surface {
+  border-top: 1px solid var(--color-very-light-gray);
+  margin: 2rem 0 3rem;
+
+@nest & ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+@nest & ul li {
+  padding: 0.25rem 0;
+}
+}
+
+.surfaceHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
+}
+
+.price {
+  border-top: 1px solid var(--color-very-light-gray);
+  margin: 2rem 0 3rem;
+
+@nest & ul {
+  list-style: none;
+  margin: 0.75rem 0;
+  padding: 0;
+}
+
+@nest & ul li {
+  padding: 0.25rem 0;
+}
+}
+
+.priceHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
+}
