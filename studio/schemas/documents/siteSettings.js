@@ -15,16 +15,22 @@ export default {
       title: 'Subtitle',
     },
     {
+      name: "summary",
+      type: "text",
+      title: "Texte de la page d'accueil",
+      description: "Cet encart de texte apparaîtra directement sur la page d'accueil.",
+    },
+    {
       name: "description",
       type: "text",
       title: "Description",
-      description: "Describe your blog for search engines and social media.",
+      description: "Description du site pour les moteurs de recherche et les réseaux sociaux.",
     },
     {
       name: "keywords",
       type: "array",
       title: "Keywords",
-      description: "Add keywords that describes your blog.",
+      description: "Mots-clés importants pour le référencement.",
       of: [{ type: "string" }],
       options: {
         layout: "tags",
@@ -33,7 +39,7 @@ export default {
     {
       name: "author",
       type: "reference",
-      description: "Publish an author and set a reference to them here.",
+      description: "Définir un agent immobilier par défaut.",
       title: "Author",
       to: [{ type: "author" }],
     },

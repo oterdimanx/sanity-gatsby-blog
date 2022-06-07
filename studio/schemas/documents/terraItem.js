@@ -4,7 +4,7 @@ export default {
  title: "Element Terrasse",
  fields: [
    {
-     name: "id",
+     name: "ident",
      type: "string",
    },
    {

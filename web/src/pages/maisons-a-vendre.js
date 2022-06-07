@@ -33,18 +33,17 @@ export const query = graphql`
       _id
     }
   }
-  query IndexPageQuery {
+
+  query MaisonsaVendrePageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
-      subtitle
       description
       keywords
-      summary
     }
     posts: allSanityPost(
-      limit: 6
+      limit: 20
       sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null }, categories: {elemMatch: {title: {eq: "Maisons à vendre"}}} }
     ) {
       edges {
         node {
@@ -59,13 +58,16 @@ export const query = graphql`
           slug {
             current
           }
+          categories {
+            title
+          }
         }
       }
     }
   }
 `;
 
-const IndexPage = (props) => {
+const MaisonsaVendrePage = (props) => {
   const { data, errors } = props;
 
   if (errors) {
@@ -97,12 +99,10 @@ const IndexPage = (props) => {
         keywords={site.keywords}
       />
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        <p>{site.subtitle}</p>
-        <p>{site.summary}</p>
+        <h1>Maisons à Vendre</h1>
         {postNodes && (
           <BlogPostPreviewList
-            title="Dernières annonces publiées"
+            title="Maisons à Vendre"
             nodes={postNodes}
             browseMoreHref="/archive/"
           />
@@ -112,4 +112,4 @@ const IndexPage = (props) => {
   );
 };
 
-export default IndexPage;
+export default MaisonsaVendrePage;

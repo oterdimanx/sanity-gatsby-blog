@@ -31,7 +31,7 @@ export const query = graphql`
         quantity
       }
       terraItems {
-        id
+        ident
         name
         quantity
       }

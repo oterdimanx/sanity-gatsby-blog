@@ -18,13 +18,13 @@ export function filterOutDocsPublishedInTheFuture({ publishedAt }) {
 }
 
 export function getBlogUrl(publishedAt, slug) {
-  return `/annonce/${format(new Date(publishedAt), "yyyy/MM")}/${
+  return `/${format(new Date(publishedAt), "yyyy/MM")}/${
     slug.current || slug
   }/`;
 }
 
-export function getAnnounceUrl(publishedAt, slug, category) {
-  return `/${category}/${format(new Date(publishedAt), "yyyy/MM")}/${
+export function getAnnonceUrl(publishedAt, slug, category) {
+  return `/${category.title || 'annonce'}/${format(new Date(publishedAt), "yyyy/MM")}/${
     slug.current || slug
   }/`;
 }

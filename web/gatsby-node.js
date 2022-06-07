@@ -9,6 +9,7 @@ const { format } = require("date-fns");
 
 async function createBlogPostPages(graphql, actions) {
   const { createPage } = actions;
+
   const result = await graphql(`
     {
       allSanityPost(
@@ -16,16 +17,52 @@ async function createBlogPostPages(graphql, actions) {
       ) {
         edges {
           node {
+            categories {
+              _id
+              title
+            }
+          }
+          node {
             id
             publishedAt
             slug {
               current
+            }
+            categories {
+              id
+              title
             }
           }
         }
       }
     }
   `);
+  /*
+  const result = await graphql(`
+    {
+      allSanityPost(
+        sort: { fields: [publishedAt], order: DESC }
+        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+      ) {
+        edges {
+          node {
+            id
+            publishedAt
+            title
+            _rawExcerpt
+            slug {
+              current
+            }
+            categories {
+              _id
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+  */
 
   if (result.errors) throw result.errors;
 
@@ -34,9 +71,14 @@ async function createBlogPostPages(graphql, actions) {
   postEdges
     .filter((edge) => !isFuture(new Date(edge.node.publishedAt)))
     .forEach((edge) => {
-      const { id, slug, category = {}, publishedAt } = edge.node;
+
+      const { id, slug = {}, categories, publishedAt } = edge.node;
+
       const dateSegment = format(new Date(publishedAt), "yyyy/MM");
-      const path = `/annonce/${dateSegment}/${slug.current}/`;
+      //const [props] = Object.keys(edge);
+      //var dudu = [props]["categories"];
+      //${cattest}
+      const path = `/${dateSegment}/${slug.current}/`;
 
       createPage({
         path,
