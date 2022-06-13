@@ -1,5 +1,5 @@
 import * as styles from "./blog-post-preview.module.css";
-import { buildImageObj, cn, getBlogUrl } from "../lib/helpers";
+import { buildImageObj, cn, getBlogUrl, getAnnonceUrl } from "../lib/helpers";
 import { Link } from "gatsby";
 import PortableText from "./portableText";
 import React from "react";
@@ -9,10 +9,11 @@ import { imageUrlFor } from "../lib/image-url";
 import { responsiveTitle3 } from "./typography.module.css";
 
 function BlogPostPreview(props) {
+
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
-      to={getBlogUrl(props.publishedAt, props.slug.current)}
+      to={getAnnonceUrl(props.publishedAt, props.slug.current, props.categories)}
     >
       <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (

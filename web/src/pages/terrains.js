@@ -59,7 +59,7 @@ export const query = graphql`
             current
           }
           categories {
-            title
+            ident
           }
         }
       }

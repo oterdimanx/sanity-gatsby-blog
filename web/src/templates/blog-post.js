@@ -13,8 +13,8 @@ export const query = graphql`
       id
       publishedAt
       categories {
-        _id
         title
+        ident
       }
       isles {
         _id

@@ -17,14 +17,22 @@ export function filterOutDocsPublishedInTheFuture({ publishedAt }) {
   return !isFuture(new Date(publishedAt));
 }
 
-export function getBlogUrl(publishedAt, slug) {
+export function filterOutputExtractor({ categories }) {
+  var str     = JSON.parse(JSON.stringify(categories));
+  var catSlug = str[0]['ident'];
+  return catSlug;
+}
+
+export function getBlogUrl(publishedAt, slug ) {
   return `/${format(new Date(publishedAt), "yyyy/MM")}/${
     slug.current || slug
   }/`;
 }
 
 export function getAnnonceUrl(publishedAt, slug, category) {
-  return `/${category.title || 'annonce'}/${format(new Date(publishedAt), "yyyy/MM")}/${
+  var str     = JSON.parse(JSON.stringify(category));
+  var catSlug = str[0]['ident'];
+  return `/${catSlug || 'annonce'}/${format(new Date(publishedAt), "yyyy/MM")}/${
     slug.current || slug
   }/`;
 }

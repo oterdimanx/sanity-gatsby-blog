@@ -10,15 +10,15 @@ import styles from "./IframePreview.module.css";
  */
 
 const assemblePostUrl = ({ displayed, options }) => {
-  const { slug, publishedAt } = displayed;
+  const { slug, publishedAt, categories } = displayed;
   const { previewURL } = options;
-  if (!slug || !previewURL) {
-    console.warn("Missing slug or previewURL", { slug, previewURL });
+  if (!slug || !previewURL || !categories) {
+    console.warn("Missing slug or previewURL or categories", { slug, previewURL });
     return "";
   }
   const dateSegment = format(new Date(publishedAt), "yyyy/MM");
   const path = `/${dateSegment}/${slug.current}/`;
-  return `${previewURL}/blog${path}`;
+  return `${previewURL}${path}`;
 };
 
 const IframePreview = (props) => {

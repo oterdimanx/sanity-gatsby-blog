@@ -9,6 +9,11 @@ export default {
       title: "Titre",
     },
     {
+      name: "ident",
+      type: "string",
+      title: "Urls de la catégorie respective",
+    },
+    {
       name: "description",
       type: "text",
       title: "Description",

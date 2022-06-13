@@ -17,68 +17,33 @@ async function createBlogPostPages(graphql, actions) {
       ) {
         edges {
           node {
-            categories {
-              _id
-              title
-            }
-          }
-          node {
             id
             publishedAt
             slug {
               current
             }
             categories {
-              id
-              title
+              ident
             }
           }
         }
       }
     }
   `);
-  /*
-  const result = await graphql(`
-    {
-      allSanityPost(
-        sort: { fields: [publishedAt], order: DESC }
-        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
-        edges {
-          node {
-            id
-            publishedAt
-            title
-            _rawExcerpt
-            slug {
-              current
-            }
-            categories {
-              _id
-              title
-            }
-          }
-        }
-      }
-    }
-  `);
-  */
 
   if (result.errors) throw result.errors;
 
   const postEdges = (result.data.allSanityPost || {}).edges || [];
 
   postEdges
-    .filter((edge) => !isFuture(new Date(edge.node.publishedAt)))
+    .filter((edge)  => !isFuture(new Date(edge.node.publishedAt)))
     .forEach((edge) => {
 
-      const { id, slug = {}, categories, publishedAt } = edge.node;
-
-      const dateSegment = format(new Date(publishedAt), "yyyy/MM");
-      //const [props] = Object.keys(edge);
-      //var dudu = [props]["categories"];
-      //${cattest}
-      const path = `/${dateSegment}/${slug.current}/`;
+      const { id, slug      = {}, publishedAt, categories } = edge.node;
+      const currentCategory = JSON.parse(JSON.stringify(categories));
+      const catSlug         = currentCategory[0]['ident'];
+      const dateSegment     = format(new Date(publishedAt), "yyyy/MM");
+      const path            = `/${catSlug}/${dateSegment}/${slug.current}/`;
 
       createPage({
         path,

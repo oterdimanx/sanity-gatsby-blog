@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
-/*
-const query = graphql`
-  query SiteTitleQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-    }
-  }
-`;
-*/
+
 const query = graphql`
   query SiteMenuQuery {
     site {
