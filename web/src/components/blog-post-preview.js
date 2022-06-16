@@ -1,5 +1,5 @@
 import * as styles from "./blog-post-preview.module.css";
-import { buildImageObj, cn, getBlogUrl, getAnnonceUrl } from "../lib/helpers";
+import { buildImageObj, cn, getAnnonceUrl } from "../lib/helpers";
 import { Link } from "gatsby";
 import PortableText from "./portableText";
 import React from "react";

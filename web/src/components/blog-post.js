@@ -6,6 +6,7 @@ import PortableText from "./portableText";
 import React from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
+//import Img from "gatsby-image";
 
 function BlogPost(props) {
   const {
@@ -20,6 +21,21 @@ function BlogPost(props) {
     price,
     title,
     mainImage,
+    altImage1,
+    altImage2,
+    altImage3,
+    altImage4,
+    altImage5,
+    altImage6,
+    altImage7,
+    altImage8,
+    altImage9,
+    altImage10,
+    altImage11,
+    altImage12,
+    altImage13,
+    altImage14,
+    altImage15,
     publishedAt,
   } = props;
   return (
@@ -36,6 +52,222 @@ function BlogPost(props) {
             alt={mainImage.alt}
           />
         </div>
+      )}
+      {mainImage && altImage1 && altImage2 && altImage3 && altImage4 && altImage5 && altImage6 && altImage7 && altImage8 && altImage9 && (
+      <Container>
+        <div id="slideshow">
+          {mainImage && mainImage.asset && (
+            <div className={styles.mainImage}>
+              <img
+                src={imageUrlFor(buildImageObj(mainImage))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={mainImage.alt}
+              />
+            </div>
+          )}
+
+          {altImage1 && altImage1.asset && (
+            <div className={styles.altImage1}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage1))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage1.alt}
+              />
+            </div>
+          )}
+
+          {altImage2 && altImage2.asset && (
+            <div className={styles.altImage2}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage2))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage2.alt}
+              />
+             </div>
+          )}
+
+          {altImage3 && altImage3.asset && (
+            <div className={styles.altImage3}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage3))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage3.alt}
+              />
+             </div>
+          )}
+
+          {altImage4 && altImage4.asset && (
+            <div className={styles.altImage4}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage4))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage4.alt}
+              />
+             </div>
+          )}
+
+          {altImage5 && altImage5.asset && (
+               <div className={styles.altImage5}>
+                <img
+                  src={imageUrlFor(buildImageObj(altImage5))
+                    .width(400)
+                    .height(Math.floor((9 / 16) * 400))
+                    .fit("crop")
+                    .auto("format")
+                    .url()}
+                  alt={altImage5.alt}
+                />
+               </div>
+          )}
+
+          {altImage6 && altImage6.asset && (
+             <div className={styles.altImage6}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage6))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage6.alt}
+              />
+             </div>
+          )}
+
+          {altImage7 && altImage7.asset && (
+            <div className={styles.altImage7}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage7))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage7.alt}
+              />
+             </div>
+          )}
+
+          {altImage8 && altImage8.asset && (
+            <div className={styles.altImage8}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage8))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage8.alt}
+              />
+             </div>
+          )}
+
+          {altImage9 && altImage9.asset && (
+            <div className={styles.altImage9}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage9))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage9.alt}
+              />
+             </div>
+          )}
+
+          {altImage10 && altImage10.asset && (
+            <div className={styles.altImage10}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage10))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage10.alt}
+              />
+             </div>
+          )}
+
+          {altImage11 && altImage11.asset && (
+            <div className={styles.altImage11}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage11))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage11.alt}
+              />
+             </div>
+          )}
+
+          {altImage12 && altImage12.asset && (
+            <div className={styles.altImage12}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage12))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage12.alt}
+              />
+             </div>
+          )}
+
+          {altImage13 && altImage13.asset && (
+            <div className={styles.altImage13}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage13))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage13.alt}
+              />
+             </div>
+          )}
+
+          {altImage14 && altImage14.asset && (
+            <div className={styles.altImage14}>
+              <img
+                src={imageUrlFor(buildImageObj(altImage14))
+                  .width(400)
+                  .height(Math.floor((9 / 16) * 400))
+                  .fit("crop")
+                  .auto("format")
+                  .url()}
+                alt={altImage14.alt}
+              />
+             </div>
+          )}
+
+        </div>
+      </Container>
       )}
       <Container>
         <div className={styles.grid}>
@@ -118,7 +350,6 @@ function BlogPost(props) {
                 </ul>
               </div>
             )}
-
           </aside>
         </div>
       </Container>

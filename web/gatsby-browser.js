@@ -3,5 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+const $ = require("jquery")
 
-// You can delete this file if you're not using it
+export const onInitialClientRender = () => {
+  $(document).ready(function () {});
+}

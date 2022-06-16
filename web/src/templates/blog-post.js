@@ -6,6 +6,9 @@ import Layout from "../containers/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
+import Img from "gatsby-image";
+import { withPrefix, Link } from "gatsby";
+import Helmet from "react-helmet";
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -36,6 +39,66 @@ export const query = graphql`
         quantity
       }
       mainImage {
+        ...SanityImage
+        alt
+      }
+      altImage1 {
+        ...SanityImage
+        alt
+      }
+      altImage2 {
+        ...SanityImage
+        alt
+      }
+      altImage3 {
+        ...SanityImage
+        alt
+      }
+      altImage4 {
+        ...SanityImage
+        alt
+      }
+      altImage5 {
+        ...SanityImage
+        alt
+      }
+      altImage6 {
+        ...SanityImage
+        alt
+      }
+      altImage7 {
+        ...SanityImage
+        alt
+      }
+      altImage8 {
+        ...SanityImage
+        alt
+      }
+      altImage9 {
+        ...SanityImage
+        alt
+      }
+      altImage10 {
+        ...SanityImage
+        alt
+      }
+      altImage11 {
+        ...SanityImage
+        alt
+      }
+      altImage12 {
+        ...SanityImage
+        alt
+      }
+      altImage13 {
+        ...SanityImage
+        alt
+      }
+      altImage14 {
+        ...SanityImage
+        alt
+      }
+      altImage15 {
         ...SanityImage
         alt
       }
@@ -91,7 +154,9 @@ const BlogPostTemplate = (props) => {
           image={post.mainImage}
         />
       )}
-
+      <Helmet>
+          <script src={withPrefix('slideshow.js')} type="text/javascript" />
+      </Helmet>
       {errors && (
         <Container>
           <GraphQLErrorList errors={errors} />
