@@ -1,5 +1,3 @@
-import fetch from "cross-fetch";
-
 // Using CommonJS modules
 const fetch = require("cross-fetch");
 
