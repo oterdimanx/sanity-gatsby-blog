@@ -6,7 +6,7 @@ import PortableText from "./portableText";
 import React from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
-//import Img from "gatsby-image";
+import Img from "gatsby-image";
 
 function BlogPost(props) {
   const {

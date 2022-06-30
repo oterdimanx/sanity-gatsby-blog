@@ -5,6 +5,14 @@
   margin: 2em 0 4em;
 }
 
+.root h2 {
+  text-align: center;
+  color: var(--color-h2);
+  font-size: 1.2em;
+  padding: 3px;
+  font-weight: bolder;
+}
+
 .headline {
   font-size: var(--font-micro-size);
   line-height: var(--font-micro-line-height);
@@ -22,6 +30,10 @@
   grid-template-columns: 1fr;
   grid-column-gap: 2em;
   grid-row-gap: 2em;
+}
+
+.grid li {
+  background-color: var(--color-preview-bg);
 }
 
 .browseMoreNav {

@@ -1,0 +1,21 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+
+.root {
+  height: auto;
+}
+
+.grid {
+  display: flex;
+}
+
+.slide {
+  display: inline-flex;
+}
+
+.image {
+  float:left;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline;
+}

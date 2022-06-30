@@ -7,6 +7,8 @@ import {
 } from "../lib/helpers";
 import BlogPostPreviewList from "../components/blog-post-preview-list";
 import Container from "../components/container";
+import HomeCaroussel from "../components/home-caroussel";
+import HomeContactBlock from "../components/home-contact-block";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
@@ -54,6 +56,7 @@ export const query = graphql`
             ...SanityImage
             alt
           }
+          code
           title
           _rawExcerpt
           slug {
@@ -62,6 +65,23 @@ export const query = graphql`
           categories {
             ident
           }
+          isles {
+           title
+         }
+         chambres {
+            numChambres
+            quantity
+          }
+         garageItems {
+           name
+           quantity
+         }
+         terraItems {
+           name
+           quantity
+          }
+         surface
+         price
         }
       }
     }
@@ -99,13 +119,19 @@ const IndexPage = (props) => {
         description={site.description}
         keywords={site.keywords}
       />
+      {postNodes && (
+        <HomeCaroussel nodes={postNodes} />
+      )}
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
-        <p>{site.subtitle}</p>
-        <p>{site.summary}</p>
+        <div>
+          <p class="subtitle">{site.subtitle}</p>
+          <p class="summary">{site.summary}</p>
+        </div>
+        <HomeContactBlock />
         {postNodes && (
           <BlogPostPreviewList
-            title="Dernières annonces publiées"
+            title="Découvrez nos nouveautés"
             nodes={postNodes}
             browseMoreHref="/archive/"
           />

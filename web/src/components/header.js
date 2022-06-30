@@ -6,6 +6,7 @@ import { cn } from "../lib/helpers";
 import * as styles from "./header.module.css";
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle, menuLinks }) => (
+
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
@@ -30,7 +31,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle, menuLinks }) => (
                     padding: `1rem`,
                   }}
                 >
-                  <Link style={{ color: `black` }} to={link.link}>
+                  <Link style={{ color: `#334758` }} to={link.link}>
                     {link.name}
                   </Link>
                 </li>

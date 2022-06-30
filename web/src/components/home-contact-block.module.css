@@ -1,0 +1,42 @@
+@import '../styles/custom-media.css';
+@import '../styles/custom-properties.css';
+
+.root {
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-summary);
+  padding-top: 30px;
+  font-weight: 900;
+}
+
+.contact {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.contact p {
+  margin-top: -10px;
+  margin-bottom: 35px;
+  text-transform: none;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+h2 {
+  color: var(--color-h2);
+  font-size: 1.2em;
+}
+
+.contactButton {
+  background-color: var(--color-contact-button);
+  color: var(--color-white);
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 46px;
+  padding-right: 46px;
+  text-transform: none;
+  text-decoration: none;
+  margin-top: 30px;
+  font-weight: 900;
+}

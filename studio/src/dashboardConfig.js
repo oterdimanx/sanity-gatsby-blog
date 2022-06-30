@@ -20,7 +20,7 @@ export default {
                 },
                 {
                   buildHookId: "6256ec14274ed740f5d2d7ed",
-                  title: "Raiatea-Immo Front Website",
+                  title: "Raiatea-Immobilier Front Website",
                   name: "sanity-gatsby-blog-web-mzdn2nm3",
                   apiId: "2cc37e51-fdab-48ac-a3ea-270faade2dde",
                 },

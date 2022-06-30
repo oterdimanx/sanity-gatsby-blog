@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Collapse, Input, Message } from "rsuite";
+import { Button, Input, Message } from "rsuite";
 import Container from "../components/container";
 import Layout from "../containers/layout";
 import SEO from "../components/seo";
-import { mapEdgesToNodes } from "../lib/helpers";
 import { responsiveTitle1 } from "../components/typography.module.css";
 
 class ContactPage extends React.Component {

@@ -45,6 +45,13 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd,
       },
-    },
+    },/*
+    {
+      resolve: "gatsby-source-open-exchange-rates",
+      options: {
+        appId: process.env.OPEN_EXCHANGE_RATES_APP_ID, // required
+      },
+    },*/
   ],
 };
+

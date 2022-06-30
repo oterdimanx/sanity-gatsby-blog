@@ -9,14 +9,20 @@ export default {
       name: "title",
       type: "string",
       title: "Title",
-      description: "Titles should be catchy, descriptive, and not too long",
+      description: "Titre de l'annonce, repris sur les pages annonces, évitez les titres trop longs pour optimiser la mise en page et le référencement.",
+    },
+    {
+      name: "code",
+      type: "string",
+      title: "Code Annonce",
+      description: "Code Annonce, mis en avant sur les aperçus d'annonce en page d'accueil.",
     },
     {
       name: "slug",
       type: "slug",
       title: "Slug",
       description:
-        "Some frontends will require a slug to be set to be able to show the post",
+        "utilisé pour l'url (adresse) de l'annonce, ne pas utiliser d'accents ni de caractères spéciaux.",
       options: {
         source: "title",
         maxLength: 96,
@@ -25,20 +31,20 @@ export default {
     {
       name: "publishedAt",
       type: "datetime",
-      title: "Published at",
-      description: "This can be used to schedule post for publishing",
+      title: "Publication planifiée",
+      description: "Cette option peut être utilisée pour planifier la mise en ligne d'une annonce à une date particulière.",
     },
     {
       name: "mainImage",
       type: "mainImage",
-      title: "Main image",
+      title: "Image Principale",
     },
     {
       name: "excerpt",
       type: "excerptPortableText",
       title: "Excerpt",
       description:
-        "This ends up on summary pages, on Google, when people share your post in social media.",
+        "Cet encart se retrouve sur les aperçus d'annonce, ou sur les moteurs de recherche, lorsqu'une page annonce est par exemple partagée dans les réseaux sociaux.",
     },
     {
       name: "authors",
@@ -121,11 +127,19 @@ export default {
       name: "surface",
       type: "string",
       title: "Surface",
+      description: "La surface du bâti.",
+    },
+    {
+      name: "globalSurface",
+      type: "string",
+      title: "Surface totale du terrain",
+      description: "La surface totale du terrain.",
     },
     {
       name: "price",
       type: "number",
       title: "Prix",
+      description: "Le prix est exprimé en euros.",
     },
     {
       name: "altImage1",
