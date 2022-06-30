@@ -6,11 +6,9 @@ import React from "react";
 import { format } from "date-fns";
 import { imageUrlFor } from "../lib/image-url";
 import { responsiveTitle3 } from "./typography.module.css";
-//import { CC } from "currency-converter-lt";
 
 function BlogPostPreview(props) {
 
-  //let currencyConverter = new CC();
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}

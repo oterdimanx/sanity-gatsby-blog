@@ -19,7 +19,7 @@ function HomeContactBlock() {
 
 HomeContactBlock.propTypes = {
   contactDescription: PropTypes.string,
-  contactTitle: PropTypes.string.isRequired,
+  contactTitle: PropTypes.string,
 };
 
 export default HomeContactBlock;
